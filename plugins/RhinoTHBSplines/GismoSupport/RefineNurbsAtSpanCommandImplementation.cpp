@@ -50,7 +50,7 @@ CRhinoCommand::result CRefineNurbsAtSpanCommandImplementation::RunActualCommand(
     }
 
 
-    std::vector<unsigned int> boxes;
+    std::vector<int> boxes;
     while (true)
     {
         CRhinoGetInteger gi;

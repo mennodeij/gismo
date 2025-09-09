@@ -9,19 +9,8 @@
 #define VC_EXTRALEAN              // Exclude rarely-used stuff from Windows headers
 #endif
 
-#if _MSC_VER == 1600
-#pragma message("Compiler is Visual Studio 2010 - assuming Rhino 5. See stdafx.h for more details.")
-#elif _MSC_VER == 1900
-#pragma message("Compiler is Visual Studio 2015 - assuming Rhino 6. See stdafx.h for more details.")
 #define RHINO_V6_READY
-#ifdef _DEBUG
-#define RHINO_LIB_DIR "C:\\Program Files\\Rhino 6.0 SDK\\lib\\Debug\\"
-#else
-#define RHINO_LIB_DIR "C:\\Program Files\\Rhino 6.0 SDK\\lib\\Release\\"
-#endif
-#else 
-#error("Compiler not recognized. See stdafx.h to define RHINO_V6_READY")
-#endif
+#define RHINO_LIB_DIR "C:\\Program Files\\Rhino 8 SDK\\lib\\Release\\"
 
 // Disable warning C4100: 'identifier' : unreferenced formal parameter
 #pragma warning( disable:4100 )
@@ -36,11 +25,7 @@
 #endif
 
 // Rhino SDK Preamble
-#ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\RhinoSdkStdafxPreamble.h"
-#else
-#include "C:\Program Files (x86)\Rhino 5.0 x64 SDK\Inc\RhinoSdkStdafxPreamble.h"
-#endif
+#include "C:\Program Files\Rhino 8 SDK\inc\RhinoSdkStdafxPreamble.h"
 
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS    // some CString constructors will be explicit
 
@@ -81,20 +66,11 @@
 #endif
 
 // Rhino Plug-in
-#ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\RhinoSdk.h"
-#else
-#include "C:\Program Files (x86)\Rhino 5.0 x64 SDK\Inc\RhinoSdk.h"
-#endif
-
-
+// Rhino Plug-in
+#include "C:\Program Files\Rhino 8 SDK\inc\RhinoSdk.h"
 
 // Render Development Kit.
-#ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\RhRdkHeaders.h"
-#else
-#include "C:\Program Files (x86)\Rhino 5.0 x64 SDK\Inc\RhRdkHeaders.h"
-#endif
+#include "C:\Program Files\Rhino 8 SDK\inc\RhRdkHeaders.h"
 
 #if defined(RHINO_DEBUG_PLUGIN)
 // Now that all the system headers are read, we can
@@ -104,8 +80,4 @@
 #endif
 
 // Rhino Plug-in Linking Pragmas
-#ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\rhinoSdkPlugInLinkingPragmas.h"
-#else
-#include "C:\Program Files (x86)\Rhino 5.0 x64 SDK\Inc\rhinoSdkPlugInLinkingPragmas.h"
-#endif
+#include "C:\Program Files\Rhino 8 SDK\inc\rhinoSdkPlugInLinkingPragmas.h"

@@ -79,23 +79,23 @@ VS_VERSION_INFO     VERSIONINFO
  FILETYPE VFT_DLL
  FILESUBTYPE VFT2_UNKNOWN
 BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
         BLOCK "0409"
-        BEGIN
+		BEGIN
             VALUE "CompanyName", "MARIN"
             VALUE "FileDescription", "THB Splines"
-            VALUE "FileVersion",     "1.0.0.0"
-            VALUE "InternalName",    "THBSplines.rhp"
+			VALUE "FileVersion",     "1.0.0.0"
+			VALUE "InternalName",    "THBSplines.rhp"
             VALUE "LegalCopyright", "Copyright © 2016, MARIN"
-            VALUE "OriginalFilename","THBSplines.rhp"
+			VALUE "OriginalFilename","THBSplines.rhp"
             VALUE "ProductName", "THBSplines"
-            VALUE "ProductVersion",  "1.0.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x0409, 1252
+			VALUE "ProductVersion",  "1.0.0.0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x0409, 1252
     END
 END
 

@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B82C7689-BEA8-428E-8424-4CFB4BAA3C40}</ProjectGuid>
     <RootNamespace>GismoSupport</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <Keyword>MFCDLLProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -60,14 +60,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>DO_EXPORTS;WIN64;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\gismo\include\gismo\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\libs-install\gismo\include\gismo\</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>.\GismoSupport.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Rhino 5.0 x64 SDK\lib64;C:\Program Files\gismo\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\Rhino 8 SDK\lib;D:\dev\libs-install\gismo\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>gismo.lib</AdditionalDependencies>
     </Link>
     <Midl>
@@ -89,7 +89,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>DO_EXPORTS;WIN64;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\gismo\include\gismo\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\libs-install\gismo\include\gismo\</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zm300 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -98,7 +98,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>.\GismoSupport.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Rhino 5.0 x64 SDK\lib64;C:\Program Files\gismo\lib\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\Rhino 8 SDK\lib;D:\dev\libs-install\gismo\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>gismo.lib</AdditionalDependencies>
     </Link>
     <Midl>

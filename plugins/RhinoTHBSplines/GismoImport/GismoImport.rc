@@ -79,23 +79,23 @@ VS_VERSION_INFO     VERSIONINFO
  FILETYPE VFT_DLL
  FILESUBTYPE VFT2_UNKNOWN
 BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
         BLOCK "0409"
-        BEGIN
+		BEGIN
             VALUE "CompanyName", "MARIN"
             VALUE "FileDescription", "G+SMO Import"
-            VALUE "FileVersion",     "1.0.0.0"
-            VALUE "InternalName",    "GismoImport.rhp"
+			VALUE "FileVersion",     "1.0.0.0"
+			VALUE "InternalName",    "GismoImport.rhp"
             VALUE "LegalCopyright", "Copyright © 2016, MARIN"
-            VALUE "OriginalFilename","GismoImport.rhp"
+			VALUE "OriginalFilename","GismoImport.rhp"
             VALUE "ProductName", "G+SMO Import"
-            VALUE "ProductVersion",  "1.0.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x0409, 1252
+			VALUE "ProductVersion",  "1.0.0.0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x0409, 1252
     END
 END
 

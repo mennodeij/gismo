@@ -172,4 +172,8 @@
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="GismoIssues.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
 </Project>

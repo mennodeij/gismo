@@ -192,12 +192,13 @@ CRhinoCommand::result CRefineNurbsCommandImplementation::RunActualCommand(const 
 
     CRhinoObjRef oRef = go.Object(0);
 
+    // crashes when a THB surface is selected :(
     const ON_Surface* srf = oRef.Surface();
     ON_NurbsSurface nurbs;
     srf->GetNurbForm(nurbs);
 
 
-    std::vector<unsigned int> boxes;
+    std::vector<int> boxes;
     while (true)
     {
         CRhinoGetInteger gi;

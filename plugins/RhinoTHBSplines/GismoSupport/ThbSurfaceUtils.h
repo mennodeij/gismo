@@ -13,7 +13,7 @@ public:
     static int NurbForm(const gsBSpline<>& b, ON_NurbsCurve& crv, double tolerance = 0);
 
     static bool FromSurface(const ON_Surface& srf, gsTHBSpline2& thb);
-    static bool FromSurface(const ON_Surface& srf, const std::vector<unsigned int>& boxes, gsTHBSpline2& thb);
+    static bool FromSurface(const ON_Surface& srf, const std::vector<int>& boxes, gsTHBSpline2& thb);
 
 private:
     template<class T>

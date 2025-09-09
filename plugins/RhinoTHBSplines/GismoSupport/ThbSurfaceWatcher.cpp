@@ -34,7 +34,7 @@ void CThbSurfaceWatcher::Notify(const CRhinoIsIdle::CParameters& params)
     for (int i = 0; i < n; ++i)
     {
         const ON_UUID& id = list[i];
-        CRhinoObjRef objRef(id);
+        CRhinoObjRef objRef(doc->RuntimeSerialNumber(), id);
         
         CThbSurfaceUserData* sud = (CThbSurfaceUserData*)objRef.Object()
             ->GetGeometryUserData(CThbSurfaceUserData::Id());

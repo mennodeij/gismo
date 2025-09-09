@@ -20,13 +20,13 @@ public:
 
     static ON_UUID PlugInId();
 
-    BOOL GetDescription(ON_wString& description) override;
+    bool GetDescription(ON_wString& description) override;
 
-    ON_BOOL32 Archive() const override;
-    ON_BOOL32 Write(ON_BinaryArchive&) const override;
-    ON_BOOL32 Read(ON_BinaryArchive&) override;
+    bool Archive() const override;
+    bool Write(ON_BinaryArchive&) const override;
+    bool Read(ON_BinaryArchive&) override;
 
-    ON_BOOL32 Transform(const ON_Xform&) override;
+    bool Transform(const ON_Xform&) override;
 
     gsTHBSpline2* HierarchicalSurface() const { return m_thb; }
     void SetModelObjectId(ON_UUID& id) { m_id = id; }

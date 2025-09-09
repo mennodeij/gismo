@@ -47,7 +47,7 @@ int ON_GismoUtils::NurbForm(const gsTensorNurbs2& nurbs, ON_NurbsSurface& ns, do
         {
             ON_4dPoint cv;
             ns.GetCV(row, col, cv);
-            RhinoApp().ActiveDoc()->AddPointObject(cv);
+            RhinoApp().ActiveDoc()->AddPointObject(ON_3dPoint(cv));
 
             double w = nurbs.basis().weight(i);
             ++i;
@@ -124,7 +124,7 @@ bool ON_GismoUtils::FromSurface(const ON_Surface& srf, gsTHBSpline2& thb)
     return true;
 }
 
-bool ON_GismoUtils::FromSurface(const ON_Surface& srf, const std::vector<unsigned int>& boxes, gsTHBSpline2& thb)
+bool ON_GismoUtils::FromSurface(const ON_Surface& srf, const std::vector<int>& boxes, gsTHBSpline2& thb)
 {
     if (!FromSurface(srf, thb))
         return false;
@@ -138,12 +138,12 @@ int ON_GismoUtils::BrepForm(const gsTHBSpline2& thb, ON_Brep& b, double toleranc
 {
     b = ON_Brep();// re-initialize to empty brep. 
 
-    gsMatrix<unsigned> b1, b2;
-    gsVector<unsigned> level;
+    gsMatrix<int> b1, b2;
+    gsVector<int> level;
     thb.basis().tree().getBoxes(b1, b2, level); // splitting based on the quadtree
 
     const int nboxes = level.size();
-    gsVector<unsigned> p1, p2;
+    gsVector<int> p1, p2;
     gsMatrix<> temp1;
     gsKnotVector<> cku, ckv;
     

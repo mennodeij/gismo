@@ -61,19 +61,19 @@ ON_UUID CThbSurfaceUserData::PlugInId()
 }
 
 
-BOOL CThbSurfaceUserData::GetDescription(ON_wString& description)
+bool CThbSurfaceUserData::GetDescription(ON_wString& description)
 {
     description = L"hierarchical surface data";
     return true;
 }
 
-ON_BOOL32 CThbSurfaceUserData::Archive() const
+bool CThbSurfaceUserData::Archive() const
 {
     return true;
 }
 
 const int major = 0, minor = 0;
-ON_BOOL32 CThbSurfaceUserData::Write(ON_BinaryArchive& a) const
+bool CThbSurfaceUserData::Write(ON_BinaryArchive& a) const
 {    
     // write version
     a.Write3dmChunkVersion(major, minor);
@@ -100,7 +100,7 @@ ON_BOOL32 CThbSurfaceUserData::Write(ON_BinaryArchive& a) const
 
 
 
-ON_BOOL32 CThbSurfaceUserData::Read(ON_BinaryArchive& a)
+bool CThbSurfaceUserData::Read(ON_BinaryArchive& a)
 {
     // read version
     int maj(-1), min(-1);
@@ -150,7 +150,7 @@ ON_BOOL32 CThbSurfaceUserData::Read(ON_BinaryArchive& a)
     return m_thb != nullptr;
 }
 
-ON_BOOL32 CThbSurfaceUserData::Transform(const ON_Xform& x)
+bool CThbSurfaceUserData::Transform(const ON_Xform& x)
 {
     if (!m_thb) return false;
     const gsMatrix<>& coefs = m_thb->coefs();

@@ -13,11 +13,8 @@
 #pragma warning(pop)
 
 // Rhino plug-in declaration
-#ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\rhinoSdkPlugInDeclare.h"
-#else
+#include "C:\Program Files\Rhino 8 SDK\inc\rhinoSdkPlugInDeclare.h"
 RHINO_PLUG_IN_DECLARE
-#endif
 
 // Rhino plug-in name
 // Provide a short, friendly name for this plug-in.

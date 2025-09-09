@@ -42,7 +42,7 @@
   <PropertyGroup Label="Globals">
     <Keyword>MFCDLLProj</Keyword>
     <ProjectGuid>{B5B40912-7EFC-49C1-B5C8-D2AEE9276E3F}</ProjectGuid>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -62,6 +62,9 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <RhinoSdkPath>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\McNeel\Rhinoceros\SDK\8.0', 'InstallPath', null, RegistryView.Registry64))</RhinoSdkPath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -80,7 +83,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Rhino 5.0 x64 SDK\lib64;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\Rhino 8 SDK\lib;$(OutDir)</AdditionalLibraryDirectories>
       <AdditionalDependencies>GismoSupport.lib</AdditionalDependencies>
     </Link>
     <Midl>
@@ -108,7 +111,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Rhino 5.0 x64 SDK\lib64;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\Rhino 8 SDK\lib;$(OutDir)</AdditionalLibraryDirectories>
       <AdditionalDependencies>GismoSupport.lib</AdditionalDependencies>
     </Link>
     <Midl>

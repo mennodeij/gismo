@@ -66,7 +66,7 @@ void CThbSurfaceGrips::Reset()
         {
             ON_4dPoint origPt(coefs(row, 0), coefs(row, 1), coefs(row, 2), coefs(row, 3));
             pGrip->m_base_point = ON_3dPoint(origPt);
-            pGrip->SetPoint(origPt);
+            pGrip->SetPoint(ON_3dPoint(origPt));
         }
         else
         {

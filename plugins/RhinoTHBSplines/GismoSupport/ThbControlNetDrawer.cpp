@@ -48,14 +48,14 @@ void CThbControlNetDrawer::UpdateHierarchicalSurface(const gsTHBSpline2& thb)
             thb.basis().connectivity(thb.coefs(), lvl, cn);
         }
 
-        for (auto it = cn.edge.begin(); it != cn.edge.end(); ++it)
+        for (auto it = cn.edges().begin(); it != cn.edges().end(); ++it)
         {
             const gsEdge<>& e = *it;
             gsVertex<>* from = e.source;
             gsVertex<>* to = e.target;
 
-            ON_3dPoint f(from->coords.x(), from->coords.y(), from->coords.z());
-            ON_3dPoint t(to->coords.x(), to->coords.y(), to->coords.z());
+            ON_3dPoint f(from->x(), from->y(), from->z());
+            ON_3dPoint t(to->x(), to->y(), to->z());
 
             std::map<int, ON_SimpleArray<ON_Line>* >::iterator at = m_levelEdges.find(lvl);
             if (at == m_levelEdges.end())

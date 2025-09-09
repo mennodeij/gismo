@@ -14,7 +14,7 @@
 
 // Rhino plug-in declaration
 #ifdef RHINO_V6_READY
-#include "C:\Program Files\Rhino 6.0 SDK\inc\rhinoSdkPlugInDeclare.h"
+#include "C:\Program Files\Rhino 8 SDK\inc\rhinoSdkPlugInDeclare.h"
 #else
 RHINO_PLUG_IN_DECLARE
 #endif

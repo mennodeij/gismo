@@ -11,13 +11,13 @@ else()
   cmake_minimum_required(VERSION 3.1...3.10)
 endif()
 
-if(NOT "x${CMAKE_GENERATOR}" STREQUAL "xVisual Studio 14 2015 Win64")
-  message(FATAL_ERROR "Rhino plugin: Generator is NOT Visual Studio 14 2015 Win64. Plugin must be disabled.")
-endif()
+# if(NOT "x${CMAKE_GENERATOR}" STREQUAL "xVisual Studio 17 2022")
+  # message(FATAL_ERROR "Rhino plugin: Generator is NOT Visual Studio 17 2022. Plugin must be disabled.")
+# endif()
 
-if(NOT ("${CMAKE_BUILD_TYPE}" STREQUAL "Release" OR "${CMAKE_BUILD_TYPE}" STREQUAL "Debug") )
-  message(FATAL_ERROR "Rhino plugin: Build type is neither Debug nor Release")
-endif()
+# if(NOT ("${CMAKE_BUILD_TYPE}" STREQUAL "Release" OR "${CMAKE_BUILD_TYPE}" STREQUAL "Debug") )
+  # message(FATAL_ERROR "Rhino plugin: Build type is neither Debug nor Release")
+# endif()
 
 # Set to false to try out native cmake generators
 set(USE_VCXPROJ TRUE)
@@ -33,7 +33,7 @@ project(RhinoTHBSplines)
   #set(CMAKE_SYSTEM_VERSION 8.1)
 
   set(CMAKE_MFC_FLAG 2)
-  set(RHINO_SDK "C:/Program\ Files/Rhino\ 6.0\ SDK")
+  set(RHINO_SDK "C:/Program\ Files/Rhino\ 8\ SDK")
   
   #replace /DWIN32 "" in CMAKE_CXX_FLAGS, CMAKE_RC_FLAGS
     
@@ -45,11 +45,12 @@ if (USE_VCXPROJ)
   set(VERSION_MINOR 0)
   set(VERSION_BUGFIX 0)
 
-  if (${CMAKE_GENERATOR} MATCHES 2010)
-    set (PLATFORM_TOOLSET v100)
-  elseif (${CMAKE_GENERATOR} MATCHES 2015)
-    set (PLATFORM_TOOLSET v140)
-  endif()
+  # if (${CMAKE_GENERATOR} MATCHES 2010)
+    # set (PLATFORM_TOOLSET v100)
+  # elseif (${CMAKE_GENERATOR} MATCHES 2015)
+    # set (PLATFORM_TOOLSET v140)
+  # endif()
+  set (PLATFORM_TOOLSET v143)
 
   configure_file(Platform.targets.in ${CMAKE_BINARY_DIR}/Platform.targets)
 endif()

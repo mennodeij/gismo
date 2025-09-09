@@ -19,7 +19,7 @@ CRhinoCommand::result CTestCommandImplementation::RunActualCommand(const CRhinoC
     gsTensorBSplineBasis<2> basis(kU, kV);
 
     // the same refinement boxes as in the example
-    std::vector<unsigned int> box;
+    std::vector<int> box;
     box.push_back(1);
     box.push_back(2);
     box.push_back(2);
